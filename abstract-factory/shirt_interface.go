@@ -7,6 +7,12 @@ type IShirt interface {
 	getSize() int
 }
 
+/*
+	AddidasShirt, NikeShirtに対して、インターフェースを実装するパターンもあり得る。
+	https://refactoring.guru/ja/design-patterns/abstract-factory の疑似コードでは各具象に対してメソッドを生やしている。
+	AddidasShirt, NikeShirtにShirtを埋め込むことで、AddidasShirt, NikeShirtはIShirtインターフェースを満たし、コードの重複を解消している。
+	この共通化が正しいのかは、この演習では検討しない。
+*/
 type Shirt struct {
 	logo string
 	size int
