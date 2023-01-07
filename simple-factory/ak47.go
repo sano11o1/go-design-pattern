@@ -12,3 +12,7 @@ func newAK47() iGun {
 		},
 	}
 }
+
+func (g *AK47) getName() string {
+	return "+" + g.name
+}
